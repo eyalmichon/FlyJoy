@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context=".views.MainActivity">
+    <!-- Linear progress indicator -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/tryConProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/editTextIP"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_port"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tryConProgress"
+         />
+
+    <EditText
+        android:id="@+id/edit_text_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/editTextPort"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_ip" />
+
+    <Button
+        android:id="@+id/connect_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="connectClicked"
+        android:text="@string/connectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_port" />
+
+    <LinearLayout
+        android:id="@+id/connected_dis_status_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connect_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: " />
+
+        <TextView
+            android:id="@+id/connected_dis_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="disconnected"
+            android:textColor="#FF0000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dev_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connected_dis_status_layout">
+
+        <EditText
+            android:id="@+id/dev_control"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="11"
+            android:inputType="textPersonName"
+            android:hint="control path"
+            android:textColor="@color/design_default_color_primary"/>
+
+        <EditText
+            android:id="@+id/dev_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ems="3"
+            android:inputType="textPersonName"
+            android:layout_marginHorizontal="5dp"
+            android:hint="value"
+            android:textColor="@color/design_default_color_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dev_send_button"
+            app:icon="@android:drawable/ic_menu_send"
+            app:iconGravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="onClickDevSend"
+            />
+
+
+    </LinearLayout>
+
+    <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+        android:id="@+id/verticalSeekBarWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/rudder_seek"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+            android:id="@+id/throttle_seek"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="1000"
+            android:thumbTint="@color/design_default_color_primary"
+            app:seekBarRotation="CW270" />
+    </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+    <io.github.controlwear.virtual.joystick.android.JoystickView
+        android:id="@+id/joystick"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:JV_backgroundColor="@color/design_default_color_primary"
+        app:layout_constraintBottom_toTopOf="@+id/rudder_seek"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/rudder_seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="15dp"
+        android:max="1000"
+        android:progress="500"
+        android:progressTint="@android:color/transparent"
+        android:thumbTint="@color/design_default_color_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+
+        />
+
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandableFabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/expandable_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="45dp"
+            app:efab_closingAnticipateTension="0"
+            app:efab_color="@color/design_default_color_primary"
+            app:efab_icon="@drawable/star"
+            app:efab_iconAnimationRotationDeg="-225" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/change_view_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickChangeView"
+            app:fab_color="#5283F5"
+            app:fab_icon="@drawable/eye"
+            app:label_backgroundColor="#739BF9"
+            app:label_text="Change View" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/set_morning_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickSetMorning"
+            app:fab_color="#FFC107"
+            app:fab_icon="@drawable/sun"
+            app:label_backgroundColor="#F5CC53"
+            app:label_text="Set Morning" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/set_evening_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickSetEvening"
+            app:fab_color="#8C4B5D"
+            app:fab_icon="@drawable/evening"
+            app:label_backgroundColor="#A24D59"
+            app:label_text="Set Evening" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/start_engine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickAutoStart"
+            app:fab_color="#CB4335"
+            app:fab_icon="@drawable/power"
+            app:label_backgroundColor="#C9584D"
+            app:label_text="Start Engine" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/developer_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickDevMode"
+            app:fab_color="#9280FF"
+            app:fab_icon="@drawable/developer"
+            app:label_backgroundColor="#B5A9FC"
+            app:label_text="Developer Mode: OFF" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

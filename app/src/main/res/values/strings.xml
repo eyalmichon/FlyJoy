@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">JoyFly</string>
+
+    <string name="editTextIP">Please enter an IP</string>
+    <string name="editTextPort">Enter a port</string>
+
+    <string name="connectButton">Connect</string>
+
+    <string name="notConnectedTitle">Not connected</string>
+    <string name="notConnectedMessage">You must first connect to the FlightGear</string>
+
+    <string name="errConnectTitle">Error Connecting</string>
+    <string name="errConnectMessage">There was an error when trying to connect to the IP above, please check if the IP/Port are correct and try again</string>
+
+    <string name="emptyPortTitle">Empty port</string>
+    <string name="emptyPortMessage">You did not enter any port, usable ports are in the range of 1025–65534, please enter a port in that range and try again</string>
+
+    <string name="wrongPortTitle">Wrong port</string>
+    <string name="wrongPortMessage">The port entered was incorrect, usable ports are in the range of 1025–65534, please enter a port in that range and try again</string>
+
+    <string name="wrongIPTitle">Wrong IP</string>
+    <string name="wrongIPMessage">The IP entered was incorrect, please enter the IP where FlightGear is running on and try again</string>
+
+    <string name="alreadyConnectedTitle">Already connected!</string>
+    <string name="alreadyConnectedMessage">You\'re already connected to FlightGear!</string>
+
+</resources>
