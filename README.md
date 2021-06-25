@@ -21,11 +21,11 @@ This is a project for "Advanced Programming 2" course in Bar-Ilan University. Th
 - #### Controlling the Aircraft:
   - You have the ability to use a joystick to control the aileron and elevator and two seek bars for the throttle and rudder controls.
 - #### Extras:
-  - You can use the Extras (⭐) button located at the bottom which features:
-    - <b>Change View -</b> change the view of the plane from first person to third person.
-    - <b>Set Morning & Evening -</b> change the time of day inside the simulator to day or evening if you're feeling a bit tired 😴.
-    - <b>Start Engine -</b> There is a feature inside FlightGear to autostart the aircraft (this is a simulator so it also simulates the process of starting the engine, it is very difficult start the engine so that's why this feature exists) so you can start flying away.
-    - <b>Developer Mode -</b> FlightGear is very customizable through the telnet server, you can change almost every aspect of it, since there are many more things you can change live, and for developing purpose (and fun) this dev console can be very handy and fun 👨🏻‍💻.
+  You can use the Extras (⭐) button located at the bottom which features:
+  - <b>Change View -</b> change the view of the plane from first person to third person.
+  - <b>Set Morning & Evening -</b> change the time of day inside the simulator to day or evening if you're feeling a bit tired 😴.
+  - <b>Start Engine -</b> There is a feature inside FlightGear to autostart the aircraft (this is a simulator so it also simulates the process of starting the engine, it is very difficult start the engine so that's why this feature exists) so you can start flying away.
+  - <b>Developer Mode -</b> FlightGear is very customizable through the telnet server, you can change almost every aspect of it, since there are many more things you can change live, and for developing purpose (and fun) this dev console can be very handy and fun 👨🏻‍💻.
 
 ## Project Files
 
