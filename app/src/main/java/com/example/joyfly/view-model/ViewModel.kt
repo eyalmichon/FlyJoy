@@ -3,8 +3,8 @@ package com.example.joyfly.`view-model`
 import androidx.lifecycle.LiveData
 import com.example.joyfly.model.Model
 
-class ViewModel(model : Model) {
-    private var fgModel:Model = model
+class ViewModel() {
+    private var fgModel:Model = Model()
     // Live data of a string to get changes to view from model.
     val isConnected: LiveData<String> get() = this.fgModel.isConnected
 

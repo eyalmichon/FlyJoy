@@ -40,8 +40,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        this.model = Model()
-        this.viewModel = ViewModel(this.model!!)
+        // Add logo to top of application
+        supportActionBar?.setDisplayShowHomeEnabled(true);
+        supportActionBar?.setLogo(R.drawable.fly_joy_logo);
+        supportActionBar?.setDisplayUseLogoEnabled(true);
+        this.viewModel = ViewModel()
         this.tryConProgress = findViewById<LinearProgressIndicator>(R.id.tryConProgress)
         this.connected_dis_status = findViewById<TextView>(R.id.connected_dis_status)
         this.devButton = findViewById<FabOption>(R.id.developer_mode)
@@ -74,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         // react to changes made in isConnected with connectObserver.
-        this.model.isConnected.observe(this, connectObserver)
+        this.viewModel.isConnected.observe(this, connectObserver)
         this.joystick = findViewById<JoystickView>(R.id.joystick)
         joystick.setOnMoveListener { angle, strength ->
             if (viewModel.isConnected.value == "CON") {
@@ -160,13 +163,13 @@ class MainActivity : AppCompatActivity() {
      * configurations on Flight Gear which is set to UTC+10:00
      * @param timeToSet The time you want to warp to.
      */
-    private fun getWarp(timeToSet:Int): Int {
+    private fun getWarp(timeToSet: Int): Int {
         val sdf = SimpleDateFormat("HH")
         val dateString: String = sdf.format(Date(System.currentTimeMillis()))
-        val time = (dateString.toInt()-10)%24
-        val delta = if (timeToSet < time) timeToSet % time else timeToSet-time
+        val time = (dateString.toInt() - 10) % 24
+        val delta = if (timeToSet < time) timeToSet % time else timeToSet - time
         // return hours in seconds.
-        return delta*3600
+        return delta * 3600
     }
 
     /**
