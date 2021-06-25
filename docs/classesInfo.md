@@ -24,7 +24,9 @@ The project implements the MVVM design pattern, being seperated to 3 major parts
 --telnet=socket,in,10,127.0.0.1,[CHOOSE A PORT],tcp
 ```
 
-![FlightGear Settings](./images/flightgear_settings.png) 3. Wait for Flight Gear to load, this might take some time depending on your PC. 4. Make sure your phone/emulator and PC are connected to the same network and enter in the app the IP of the PC that's running the FlightGear game, and the port you have chosen at part 2. 5. If the connection was successful you'll get a green connected status, otherwise you'll get an error depending on the problem. 6. You can now control the aircraft with the app. 7. Tip: You can press the (⭐) button to change the time of day, and also autostart the aircraft, if you're really into playing around with FlightGear you can activate the Developer Mode which will enable you to send any command that you'd like to the FlightGear server. (For easy command viewing you can press '/' inside flight gear and see each and every property of the game changing in real time + you'll be able to change it there and also inside the app 😃)
+![FlightGear Settings](./images/flightgear_settings.png) 
+
+3. Wait for Flight Gear to load, this might take some time depending on your PC. 4. Make sure your phone/emulator and PC are connected to the same network and enter in the app the IP of the PC that's running the FlightGear game, and the port you have chosen at part 2. 5. If the connection was successful you'll get a green connected status, otherwise you'll get an error depending on the problem. 6. You can now control the aircraft with the app. 7. Tip: You can press the (⭐) button to change the time of day, and also autostart the aircraft, if you're really into playing around with FlightGear you can activate the Developer Mode which will enable you to send any command that you'd like to the FlightGear server. (For easy command viewing you can press '/' inside flight gear and see each and every property of the game changing in real time + you'll be able to change it there and also inside the app 😃)
 
 ### UML Chart
 
