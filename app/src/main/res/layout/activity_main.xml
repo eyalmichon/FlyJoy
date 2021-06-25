@@ -122,7 +122,7 @@
         android:id="@+id/verticalSeekBarWrapper"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintBottom_toTopOf="@+id/rudder_seek"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -158,6 +158,7 @@
         tools:layout_editor_absoluteX="0dp"
 
         />
+
 
     <com.nambimobile.widgets.efab.ExpandableFabLayout
         android:id="@+id/expandableFabLayout"
@@ -227,5 +228,23 @@
             app:label_text="Developer Mode: OFF" />
 
     </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+    <TextView
+        android:id="@+id/textview_throttle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Throttle"
+        app:layout_constraintBottom_toTopOf="@+id/verticalSeekBarWrapper"
+        app:layout_constraintEnd_toEndOf="@+id/verticalSeekBarWrapper"
+        app:layout_constraintStart_toStartOf="@+id/verticalSeekBarWrapper" />
+
+    <TextView
+        android:id="@+id/textview_rudder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rudder"
+        app:layout_constraintBottom_toBottomOf="@+id/joystick"
+        app:layout_constraintEnd_toEndOf="@+id/rudder_seek"
+        app:layout_constraintStart_toStartOf="@+id/rudder_seek" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
