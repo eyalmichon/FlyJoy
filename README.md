@@ -65,7 +65,7 @@ Clone the project using:
 git clone https://github.com/eyalmichon/FlyJoy.git
 ```
 
-Open Android Studio. Go to File -> New -> Import Project. Then choose the specific project you want to import and then click Next->Finish. It will build the Gradle automatically and'll be ready for you to use.
+Open Android Studio. Go to File -> New -> Import Project. Then choose the project and then click Next->Finish. It will build the Gradle automatically and will be ready for you to use.
 
 ## Additional information
 
