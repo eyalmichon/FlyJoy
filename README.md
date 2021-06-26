@@ -12,7 +12,11 @@ This is a project for "Advanced Programming 2" course in Bar-Ilan University. Th
 
 ## Preview
 
+<div align="center">
+  
 ![FlyJoy Preview](./docs/images/flyjoy_preview.gif)
+  
+</div>
 
 ## Key Features
 
