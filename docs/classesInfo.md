@@ -24,7 +24,11 @@ The project implements the MVVM design pattern, being seperated to 3 major parts
 --telnet=socket,in,10,127.0.0.1,[CHOOSE A PORT],tcp
 ```
 
+<div align="center">
+
 ![FlightGear Settings](./images/flightgear_settings.png) 
+  
+  </div>
 
 3. Wait for Flight Gear to load, this might take some time depending on your PC. 
 4. Make sure your phone/emulator and PC are connected to the same network and enter in the app the IP of the PC that's running the FlightGear game, and the port you have chosen at part 2. 
@@ -34,4 +38,8 @@ The project implements the MVVM design pattern, being seperated to 3 major parts
 
 ### UML Chart
 
+<div align="center">
+
 ![UML Chart](./images/flyjoy_UML.svg)
+  
+  </div>
