@@ -70,4 +70,4 @@ Open Android Studio. Go to File -> New -> Import Project. Then choose the projec
 ## Additional information
 
 - [More documentation and project UML](docs/classesInfo.md)
-- [Project's video]()
+- [Project's video](https://www.youtube.com/watch?v=SJLw6wgjKQg)
