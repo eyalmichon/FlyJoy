@@ -15,7 +15,7 @@ The project implements the MVVM design pattern, being separated to 3 major parts
 - The <b>Model</b> is in charge of connecting to FlightGear through a TCP Socket and being able to send the data needed to FlightGear. It is also in charge of the data binded isConnected which makes sure the view is aware of the connection status so it can change its appearance in relation to the connection.
   Other elements which are saved in the Model are the throttle, rudder, aileron, and elevator.
 
-## The Data Flow
+## The Flow
 
 1. User opens the app via android phone or the android emulator.
 2. Launch FlightGear simulator on your PC with the following settings:
